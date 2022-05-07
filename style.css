@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --cyan: #2bb3b1;
+  --cyan_light: #4abebd;
+  --bright_yellow: hsl(71, 73%, 54%);
+  --dark_yellow: hsl(71, 73%, 34%);
+
+  --light_gray: hsl(204, 43%, 93%);
+  --grayish_blue: hsl(218, 22%, 67%);
+}
+
+body {
+  max-width: 1440px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5; 
+}
+
+/*wrapper*/
+.wrapper {
+  background-color: var(--light_gray);
+  max-width: 1440px;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*parent*/
+
+.container {
+  max-width: 45%;
+}
+
+.items {
+  padding: 2rem;
+}
+
+.box-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.item-1 {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.item-1 h1 {
+  color: var(--cyan);
+}
+
+.item-1 h2 {
+  color: var(--bright_yellow);
+}
+
+.item-1 p {
+  color: var(--grayish_blue);
+}
+
+.box-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-2 > * {
+  flex: 1;
+}
+
+.item-2 {
+  color: white;
+  background-color: var(--cyan);
+  border-bottom-left-radius: 10px;
+}
+
+.item-2 b {
+  font-size: 1.5rem;
+}
+
+.item-3 {
+  color: white;
+  background-color: var(--cyan_light);
+  border-bottom-right-radius: 10px;
+}
+
+button {
+  color: white;
+  background-color: var(--bright_yellow);
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  background-color: var(--dark_yellow);
+}
+
+
+/*====================
+RESPONSIVE
+====================*/
+
+  @media screen and (max-width: 600px) {
+    body {
+      max-width: 374px;
+    }
+
+    .wrapper {
+      max-width: 375px;
+      height: 870px;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: 80%;
+    }
+
+  }
+
+
+/*====================
+FOOTER
+====================*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
